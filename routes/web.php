@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +30,8 @@ Route::middleware(['auth', 'verified'])
 
         //register all other protected routes
         //CRUD POSTS
-    
+        Route::resource('projects', ProjectController::class);
+
     });
 
 Route::middleware('auth')->group(function () {
