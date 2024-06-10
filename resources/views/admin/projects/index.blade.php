@@ -23,7 +23,9 @@
               <td>{{ $project->id}}</td>
               <td><a href="{{  route('admin.projects.show', $project) }}">{{  $project->title  }}</a></td>
               <td><a href="https://github.com/hajjamn/{{ $project->repo }}">{{ $project->repo }}</a></td>
-              <td>{{ $project->description }}</td>
+              <td>
+                {{ $project->description }}
+              </td>
             </tr>
           @endforeach
 
